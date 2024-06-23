@@ -44,7 +44,7 @@ CREATE TABLE Perusahaan (
     Alamat VARCHAR(100),
     Negara VARCHAR(100),
     Kontak VARCHAR(100),
-    Pendapatan_Tahunan DECIMAL(15, 2);
+    Pendapatan_Tahunan DECIMAL(15, 2)
 );
 
 -- Tabel Instansi_Pendidikan
