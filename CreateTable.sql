@@ -6,7 +6,7 @@ CREATE TABLE Alumnus (
     Nama VARCHAR(100),
     Tanggal_Lahir DATE,
     Alamat VARCHAR(100),
-    Asal_Kota VARCHAR(100);
+    Asal_Kota VARCHAR(100),
     No_HP CHAR(15),
     Email VARCHAR(100),
     Tahun_Masuk INTEGER,
