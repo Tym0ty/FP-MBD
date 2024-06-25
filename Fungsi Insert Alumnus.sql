@@ -56,3 +56,5 @@ END;
 
 -- Call the InsertAlumnus procedure with sample data
 CALL InsertAlumnus('NRP101', 'Zainaf Sari', '1991-09-15', 'Jl. Melinjo No. 89', 'Kediri', '081234567300', 'zainab.sari@yahoo.com', 2009, 2013, 'F', 'PK089')
+
+

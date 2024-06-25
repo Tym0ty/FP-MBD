@@ -3,12 +3,12 @@ import {
   Paper,
   TextField,
   Button,
+  Select,
+  MenuItem,
 } from '@mui/material';
 import './TableStyles.css';
 
 function Pekerjaan() {
-
-  // State variables for the new Alumnus form
   const [formData, setFormData] = useState({
     NRP: '',
     Nama: '',
@@ -23,19 +23,28 @@ function Pekerjaan() {
     ID_Pekerjaan: '',
   });
 
+  const [jobOptions, setJobOptions] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3001/pekerjaan/namapekerjaan')
+      .then(res => res.json())
+      .then(data => {
+        setJobOptions(data); // Assuming data is an array of objects with Nama_Pekerjaan and Id_Pekerjaan
+      })
+      .catch(err => console.error('Error fetching job options:', err));
+  }, []);
+
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   };
 
   const handleInsertAlumnus = () => {
-    // Validate form fields
     if (!validateForm()) {
       alert('Please fill in all fields correctly.');
       return;
     }
 
-    // Log data being sent
     console.log('Sending data:', formData);
 
     fetch('http://localhost:3001/alumnus/insert_alumnus', {
@@ -88,8 +97,7 @@ function Pekerjaan() {
 
   return (
     <div>
-
-      <Paper elevation={3} style={{ padding: '20px', marginTop: '20px' }}>
+      <Paper elevation={3} style={{ padding: '20px', marginTop: '25px' }}>
         <h2>Insert New Alumnus</h2>
         <TextField
           name="NRP"
@@ -184,16 +192,19 @@ function Pekerjaan() {
           margin="normal"
           inputProps={{ maxLength: 1 }}
         />
-        <TextField
+        <Select
           name="ID_Pekerjaan"
           label="ID Pekerjaan"
           value={formData.ID_Pekerjaan}
           onChange={handleInputChange}
           fullWidth
           margin="normal"
-          inputProps={{ maxLength: 5 }}
-        />
-        <Button variant="contained" color="primary" onClick={handleInsertAlumnus}>
+        >
+          {jobOptions.map(job => (
+            <MenuItem key={job.Id_Pekerjaan} value={job.Id_Pekerjaan}>{job.Nama_Pekerjaan}</MenuItem>
+          ))}
+        </Select>
+        <Button variant="contained" color="primary" padding ='25px' onClick={handleInsertAlumnus}>
           Insert Alumnus
         </Button>
       </Paper>

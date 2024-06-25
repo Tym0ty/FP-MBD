@@ -75,6 +75,7 @@ app.get('/alumnus/by_name', (req, res) => {
     });
 });
 
+
 app.post('/alumnus/insert_alumnus', (req, res) => {
     const { NRP, Nama, Tanggal_Lahir, Alamat, Asal_Kota, No_HP, Email, Tahun_Masuk, Tahun_Lulus, Jenis_Kelamin, ID_Pekerjaan } = req.body;
 
@@ -88,6 +89,16 @@ app.post('/alumnus/insert_alumnus', (req, res) => {
         }
         console.log('Insertion successful');
         return res.status(200).json({ message: 'Insertion successful' });
+    });
+});
+
+app.get('/pekerjaan/namapekerjaan', (req, res) => {
+    const sql = "SELECT Nama_Pekerjaan, Id_Pekerjaan FROM Pekerjaan;";
+    db.query(sql, (err, data) => {
+        if (err) {
+            console.log(err);
+        }
+        return res.json(data);
     });
 });
 
