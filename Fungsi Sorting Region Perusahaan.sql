@@ -1,3 +1,4 @@
+-- Active: 1719251590957@@127.0.0.1@3306@fp_mbd
 CREATE PROCEDURE FilterAlumnusByWorkCity(IN city VARCHAR(100))
 BEGIN
     SELECT 

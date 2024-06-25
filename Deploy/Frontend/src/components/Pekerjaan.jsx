@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, TablePagination } from '@mui/material';
+import './TableStyles.css';
 
 function Pekerjaan() {
   const [data, setData] = useState([]);
@@ -21,8 +22,8 @@ function Pekerjaan() {
   };
 
   return (
-    <TableContainer component={Paper}>
-      <Table>
+    <TableContainer component={Paper} className="table-container">
+      <Table className="full-width-table">
         <TableHead>
           <TableRow sx={{ backgroundColor: '#1976d2' }}>
             <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>ID Pekerjaan</TableCell>
