@@ -36,6 +36,9 @@ function Alumnus() {
     } else if (searchType === 'workCity') {
       endpoint = 'http://localhost:3001/alumnus/work_city';
       query = new URLSearchParams({ city: searchCity }).toString();
+    } else if (searchType === 'byname') {
+      endpoint = 'http://localhost:3001/alumnus/by_name';
+      query = new URLSearchParams({ city: searchCity }).toString(); 
     } else if (searchType === 'allData') {
       fetchAllData();
       return;
@@ -66,13 +69,14 @@ function Alumnus() {
           <MenuItem value="allData">Show All Data</MenuItem>
           <MenuItem value="alumnusCity">Search by Alumnus City</MenuItem>
           <MenuItem value="workCity">Search by Work City</MenuItem>
+          <MenuItem value="byname">Search by Alumnus Name</MenuItem>
         </Select>
       </FormControl>
 
       {searchType !== 'allData' && (
         <div style={{ margin: '20px 0', display: 'flex', alignItems: 'center' }}>
           <TextField
-            label={searchType === 'alumnusCity' ? "Search by Alumnus City" : "Search by Work City"}
+            label={searchType === 'alumnusCity' ? "Search by Alumnus City" : searchType === 'workCity' ? "Search by Work City" : "Search by Alumnus Name"}
             value={searchCity}
             onChange={(e) => setSearchCity(e.target.value)}
             variant="outlined"

@@ -58,6 +58,22 @@ app.get('/alumnus/work_city', (req, res) => {
     });
 });
 
+app.get('/alumnus/by_name', (req, res) => {
+    const cityName = req.query.city;
+    if (!cityName) {
+        return res.status(400).json({ error: 'Alumnus name is required' });
+    }
+    const sql = `CALL get_alumnus_by_name(?);`;
+    db.query(sql, [cityName], (err, results) => {
+        if (err) {
+            console.log('Database Error:', err);
+            return res.status(500).json({ error: err.message });
+        }
+        console.log('Results:', results);
+        return res.json(results[0] || []);
+    });
+});
+
 app.get('/pekerjaan', (req, res) => {
     const sql = "SELECT * FROM Pekerjaan;";
     db.query(sql, (err, data) => {
