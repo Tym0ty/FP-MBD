@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/alumnus', (req, res) => {
-    const sql = "SELECT * FROM Alumnus WHERE Asal_Kota = 'Banyuwangi';";
+    const sql = "SELECT * FROM Alumnus;";
     db.query(sql, (err, data) => {
         if (err) {
             console.log(err);
