@@ -4,6 +4,7 @@ const cors = require('cors');
 
 const app = express();
 app.use(cors());
+app.use(express.json());
 
 const db = mysql.createConnection({
     host: "localhost",
@@ -71,6 +72,22 @@ app.get('/alumnus/by_name', (req, res) => {
         }
         console.log('Results:', results);
         return res.json(results[0] || []);
+    });
+});
+
+app.post('/alumnus/insert_alumnus', (req, res) => {
+    const { NRP, Nama, Tanggal_Lahir, Alamat, Asal_Kota, No_HP, Email, Tahun_Masuk, Tahun_Lulus, Jenis_Kelamin, ID_Pekerjaan } = req.body;
+
+    const sql = `CALL InsertAlumnus(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);`;
+    const values = [NRP, Nama, Tanggal_Lahir, Alamat, Asal_Kota, No_HP, Email, Tahun_Masuk, Tahun_Lulus, Jenis_Kelamin, ID_Pekerjaan];
+
+    db.query(sql, values, (err, results) => {
+        if (err) {
+            console.log('Database Error:', err);
+            return res.status(500).json({ error: err.message });
+        }
+        console.log('Insertion successful');
+        return res.status(200).json({ message: 'Insertion successful' });
     });
 });
 
