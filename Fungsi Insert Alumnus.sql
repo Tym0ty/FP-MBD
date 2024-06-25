@@ -1,0 +1,1 @@
+CREATE PROCEDURE Insert_Alumnus (IN Nama VARCHAR(255), IN Asal_Kota VARCHAR(255), IN Tanggal_Lulus DATE)

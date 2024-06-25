@@ -5,7 +5,7 @@ BEGIN
         a.NRP,
         a.Nama,
         a.Tanggal_Lahir,
-        a.Alamat AS Alamat_Alumnus,
+        a.Alamat AS Alamat,
         a.Asal_Kota,
         a.No_HP,
         a.Email,
@@ -20,8 +20,8 @@ BEGIN
         JOIN Pekerjaan j ON a.ID_Pekerjaan = j.Id_Pekerjaan
         JOIN Perusahaan per ON j.Id_Perusahaan = per.Id_Perusahaan
     WHERE 
-        SUBSTRING_INDEX(SUBSTRING_INDEX(per.Alamat, ',', -1), ',', 1) LIKE CONCAT('%', city, '%');
+        per.Alamat LIKE CONCAT('%', city, '%');
 END;
 
-CALL FilterAlumnusByWorkCity('Jakarta');
+CALL FilterAlumnusByWorkCity('Surabaya');
 

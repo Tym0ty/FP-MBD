@@ -109,7 +109,7 @@ function Alumnus() {
                 <TableCell>{alumnus.NRP}</TableCell>
                 <TableCell>{alumnus.Nama}</TableCell>
                 <TableCell>{new Date(alumnus.Tanggal_Lahir).toLocaleDateString()}</TableCell>
-                <TableCell>{alumnus.Alamat_Alumnus}</TableCell>
+                <TableCell>{alumnus.Alamat}</TableCell>
                 <TableCell>{alumnus.Asal_Kota}</TableCell>
                 <TableCell>{alumnus.No_HP}</TableCell>
                 <TableCell className="email-column">{alumnus.Email}</TableCell>
