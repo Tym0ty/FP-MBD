@@ -1,0 +1,58 @@
+/* App.css */
+
+/* Ensure body takes full width and height */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Style the table container */
+  .MuiTableContainer-root {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  /* Style for table to take full width */
+  .MuiTable-root {
+    width: 100%;
+  }
+  
+  /* Full width for table head */
+  .MuiTableHead-root {
+    width: 100%;
+  }
+  
+  /* Full width for table body */
+  .MuiTableBody-root {
+    width: 100%;
+  }
+  
+  /* Add some padding to table cells */
+  .MuiTableCell-root {
+    padding: 8px;
+  }
+  
+  /* Ensure table rows fit within the screen */
+  .MuiTableRow-root {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+  }
+  
+  /* Custom scrollbar for overflow tables */
+  .MuiTableContainer-root::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .MuiTableContainer-root::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+  
+  .MuiTableContainer-root::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
