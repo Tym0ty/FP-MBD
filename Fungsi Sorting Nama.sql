@@ -5,9 +5,9 @@ CREATE PROCEDURE get_alumnus_by_name(IN alumnus_name VARCHAR(100))
 BEGIN
     SELECT *
     FROM Alumnus
-    WHERE Nama = alumnus_name;
+    WHERE 
+        per.Nama LIKE CONCAT('%', alumnus_name, '%');
 END;
 
-
-CALL get_alumnus_by_name('Rina Setiawati');
+CALL get_alumnus_by_name('a');
 
