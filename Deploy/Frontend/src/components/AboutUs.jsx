@@ -10,7 +10,7 @@ const AboutUs = () => {
     {
       name: 'Lathifah Sahda',
       role: '5025221159',
-      bio: 'John Doe is the visionary behind our company. With over a decade of experience in software development...',
+      bio: 'Alhamdulillah mata kuliah ini berjalan dengan baik, terimakasih atas bimbingan Bu Shintami dalam menyampaikan materi hingga akhir final project ini. Semoga ilmu yang diberikan bermanfaat',
       photo: Lathifa, 
     },
     {
@@ -20,10 +20,10 @@ const AboutUs = () => {
       photo: Brendan,
     },
     {
-        name: 'Agnes Priscilla S.H.',
-        role: '5025221295',
-        bio: 'Jane Smith brings creativity and innovation to our design team. Her expertise in user experience...',
-        photo: Agnes, 
+      name: 'Agnes Priscilla S.H.',
+      role: '5025221295',
+      bio: 'Terima kasih Bu Shintami karna sudah menjadi dosen MBD kami. Kami menjadi paham bagaimana membuat model data dan merancang data dengan baik.',
+      photo: Agnes, 
     },
   ];
 
