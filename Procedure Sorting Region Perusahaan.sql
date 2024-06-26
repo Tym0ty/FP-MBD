@@ -12,6 +12,7 @@ BEGIN
         a.Tahun_Masuk,
         a.Tahun_Lulus,
         a.Jenis_Kelamin,
+        a.Usia,
         per.Nama_Perusahaan,
         per.Alamat AS Alamat_Perusahaan,
         per.Negara
