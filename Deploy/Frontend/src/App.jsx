@@ -15,6 +15,7 @@ function App() {
           <Button color="inherit" component={Link} to="/pekerjaan">Data Pekerjaan</Button>
           <Button color="inherit" component={Link} to="/perusahaan">Data Perusahaan</Button>
           <Button color="inherit" component={Link} to="/insertdataalumnus">Insert Data Alumnus</Button>
+          <Button color="inherit" component={Link} to="/aboutus">About Us</Button>
         </Toolbar>
       </AppBar>
       <Container sx={{ marginTop: 2 }}>

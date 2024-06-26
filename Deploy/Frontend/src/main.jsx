@@ -6,6 +6,7 @@ import Alumnus from './components/Alumnus.jsx'
 import Pekerjaan from './components/Pekerjaan.jsx'
 import Perusahaan from './components/Perusahaan.jsx'
 import Insertdataalumnus from './components/Insertdataalumnus.jsx'
+import AboutUs from './components/AboutUs.jsx'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="pekerjaan" element={<Pekerjaan />} />
           <Route path="perusahaan" element={<Perusahaan />} />
           <Route path="insertdataalumnus" element={<Insertdataalumnus />} />
+          <Route path="aboutus" element={<AboutUs />} />
         </Route>
       </Routes>
     </Router>

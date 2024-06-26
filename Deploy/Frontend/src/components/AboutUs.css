@@ -1,0 +1,44 @@
+.about-us {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .team-members {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .member {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .member h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .member p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #666;
+  }
+
+  .member-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    /* Add additional styling as needed */
+  }
+  
+  
