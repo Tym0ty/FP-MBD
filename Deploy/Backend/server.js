@@ -77,10 +77,10 @@ app.get('/alumnus/by_name', (req, res) => {
 
 
 app.post('/alumnus/insert_alumnus', (req, res) => {
-    const { NRP, Nama, Tanggal_Lahir, Alamat, Asal_Kota, No_HP, Email, Tahun_Masuk, Tahun_Lulus, Jenis_Kelamin, ID_Pekerjaan } = req.body;
+    const { NRP, Nama, Tanggal_Lahir, Alamat, Asal_Kota, No_HP, Email, Tahun_Masuk, Tahun_Lulus, Jenis_Kelamin, ID_Pekerjaan, Usia } = req.body;
 
-    const sql = `CALL InsertAlumnus(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);`;
-    const values = [NRP, Nama, Tanggal_Lahir, Alamat, Asal_Kota, No_HP, Email, Tahun_Masuk, Tahun_Lulus, Jenis_Kelamin, ID_Pekerjaan];
+    const sql = `CALL InsertAndUpdateAlumnus(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);`;
+    const values = [NRP, Nama, Tanggal_Lahir, Alamat, Asal_Kota, No_HP, Email, Tahun_Masuk, Tahun_Lulus, Jenis_Kelamin, ID_Pekerjaan, Usia];
 
     db.query(sql, values, (err, results) => {
         if (err) {

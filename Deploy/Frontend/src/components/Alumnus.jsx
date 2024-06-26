@@ -102,6 +102,7 @@ function Alumnus() {
               <TableCell>Tahun Masuk</TableCell>
               <TableCell>Tahun Lulus</TableCell>
               <TableCell>Jenis Kelamin</TableCell>
+              <TableCell>Usia</TableCell>
               <TableCell>Nama Perusahaan</TableCell>
               <TableCell>Alamat Perusahaan</TableCell>
               <TableCell>Negara</TableCell>
@@ -120,6 +121,7 @@ function Alumnus() {
                 <TableCell>{alumnus.Tahun_Masuk}</TableCell>
                 <TableCell>{alumnus.Tahun_Lulus}</TableCell>
                 <TableCell>{alumnus.Jenis_Kelamin}</TableCell>
+                <TableCell>{alumnus.Usia}</TableCell>
                 <TableCell>{alumnus.Nama_Perusahaan}</TableCell>
                 <TableCell>{alumnus.Alamat_Perusahaan}</TableCell>
                 <TableCell>{alumnus.Negara}</TableCell>

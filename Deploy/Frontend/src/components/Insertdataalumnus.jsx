@@ -63,7 +63,7 @@ function Pekerjaan() {
   };
 
   const validateForm = () => {
-    const { NRP, Nama, Tanggal_Lahir, Alamat, Asal_Kota, No_HP, Email, Tahun_Masuk, Tahun_Lulus, Jenis_Kelamin, ID_Pekerjaan } = formData;
+    const { NRP, Nama, Tanggal_Lahir, Alamat, Asal_Kota, No_HP, Email, Tahun_Masuk, Tahun_Lulus, Jenis_Kelamin, ID_Pekerjaan, } = formData;
     return (
       NRP !== '' &&
       Nama !== '' &&

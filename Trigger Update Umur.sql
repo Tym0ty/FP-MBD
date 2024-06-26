@@ -17,4 +17,4 @@ END;
 
 -- Jalankan update usia untuk pertama kali
 UPDATE Alumnus
-SET Usia = YEAR(CURDATE()) - YEAR(Tanggal_Lahir);
+    SET Usia = YEAR(CURDATE()) - YEAR(Tanggal_Lahir);
