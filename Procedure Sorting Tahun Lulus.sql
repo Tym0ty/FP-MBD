@@ -1,3 +1,5 @@
+CREATE INDEX idx_tahun_lulus_alumnus ON Alumnus(Tahun_Lulus);
+
 CREATE PROCEDURE Sort_Alumni_By_Year_With_Duration(IN year INT)
 BEGIN
     SELECT 
