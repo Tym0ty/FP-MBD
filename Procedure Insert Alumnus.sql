@@ -44,8 +44,7 @@ BEGIN
 
     -- Update Usia for the newly inserted row
     UPDATE Alumnus
-    SET Usia = YEAR(CURDATE()) - YEAR(Tanggal_Lahir)
-    WHERE NRP = p_NRP;
+    SET Usia = YEAR(CURDATE()) - YEAR(Tanggal_Lahir);
 END;
 
-CALL InsertAndUpdateAlumnus('NRP108', 'Zainaf Sari', '1991-09-15', 'Jl. Melinjo No. 89', 'Kediri', '081234567300', 'zainab.sari@yahoo.com', 2009, 2013, 'F', 'PK089', NULL);
+CALL InsertAndUpdateAlumnus('NRP112', 'Zainaf Sari', '1991-09-15', 'Jl. Melinjo No. 89', 'Kediri', '081234567300', 'zainab.sari@yahoo.com', 2009, 2013, 'F', 'PK089', NULL);
